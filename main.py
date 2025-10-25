@@ -35,7 +35,6 @@ def main(page: fl.Page):
         def delete_task(_):
             main_db.delete_task(task_id=task_id, )
             task_list.controls.clear()
-            load_task()
             page.update()
 
         delete_button = fl.IconButton(icon=fl.Icons.DELETE, on_click=delete_task)
